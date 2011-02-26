@@ -121,6 +121,8 @@ body.github{
   }
 
 .github pre {
+  word-wrap: normal !important;
+  white-space: pre !important;
   margin: 1em 0 !important;
   font-size: 90% !important;
   background-color: #f8f8ff !important;
@@ -129,16 +131,47 @@ body.github{
   line-height: 1.5em !important;
   color: #444 !important;
   overflow: auto !important;
+  -webkit-border-radius: 4px;
 }
+
+  .github pre::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+
+  .github pre::-webkit-scrollbar-track-piece {
+    margin-bottom:10px;
+    background-color:#e5e5e5;
+    border-bottom-left-radius:4px 4px;
+    border-bottom-right-radius:4px 4px;
+    border-top-left-radius: 4px 4px;
+    border-top-right-radius: 4px 4px;
+  }
+
+  .github pre::-webkit-scrollbar-thumb:vertical {
+    height: 15px;
+    background-color: #ccc;
+    -webkit-border-radius: 4px;
+  }
+
+  .github pre::-webkit-scrollbar-thumb:horizontal {
+    width: 15px;
+    background-color: #ccc;
+    -webkit-border-radius: 4px;
+  }
 
   .github pre code {
     padding: 0 !important;
     font-size: 100% !important;
     background-color: #f8f8ff !important;
     border: none !important;
+    overflow: visible !important;
+    -webkit-border-radius: 4px;
   }
 
 .github code {
+  word-wrap: normal !important;
+  white-space: pre !important;
   font-size: 90% !important;
   background-color: #f8f8ff !important;
   color: #444 !important;

@@ -123,19 +123,18 @@ body.github{
   }
 
 .github pre {
-/*  word-wrap: normal !important;
-  white-space: pre !important;*/
-  margin: 1em 0 !important;
-  font-size: 12px;
-  background-color: #EEE !important;
-  border: 1px solid #DDD !important;
-  padding: 5px !important;
-  line-height: 1.5em !important;
-  color: #444 !important;
-  overflow: auto;
-	border-radius: 3px;
-  -webkit-border-radius: 3px;
-	-webkit-box-shadow: rgba(0, 0, 0, 0.07) 0 1px 2px inset;
+	margin:1em 0;
+	font-size:12px;
+	background-color:#eee;
+	border:1px solid #ddd;
+	padding:5px;
+	line-height:1.5em;
+	color:#444;
+	overflow:auto;
+	-webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
 }
 
 
@@ -175,11 +174,11 @@ body.github{
   }
 
 .github code {
-  font-size: 12px !important;
-  background-color: ghostWhite!important;
-  color: #444 !important;
-  padding: 0 .2em !important;
-  border: 1px solid #dedede !important;
+	font-size:12px!important;
+	background-color:#f8f8ff!important;
+	color:#444!important;
+	padding:0 .2em!important;
+	border:1px solid #dedede!important;
 }
 
 /* console */

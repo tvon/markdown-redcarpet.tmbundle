@@ -125,14 +125,16 @@ body.github{
   white-space: pre !important;
   margin: 1em 0 !important;
   font-size: 90% !important;
-  background-color: #f8f8ff !important;
-  border: 1px solid #dedede !important;
+  background-color: #EEE !important;
+  border: 1px solid #DDD !important;
   padding: .5em !important;
   line-height: 1.5em !important;
   color: #444 !important;
   overflow: auto !important;
-  -webkit-border-radius: 4px;
+  -webkit-border-radius: 3px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.07) 0 1px 2px inset;
 }
+
 
   .github pre::-webkit-scrollbar {
     height: 8px;

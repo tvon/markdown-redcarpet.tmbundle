@@ -137,6 +137,10 @@ body.github{
 	border-radius:3px;
 }
 
+.github pre, .github code {
+	font: 12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+}
+
 
   .github pre::-webkit-scrollbar {
     height: 8px;
@@ -166,11 +170,9 @@ body.github{
 
   .github pre code {
     padding: 0 !important;
-    font-size: 100% !important;
-    background-color: #f8f8ff !important;
+    font-size: 12px !important;
+    background-color: #EEE !important;
     border: none !important;
-    overflow: visible !important;
-    -webkit-border-radius: 4px;
   }
 
 .github code {
@@ -191,6 +193,7 @@ body.github{
   line-height: 1.5em !important;
   color: white !important;
 }
+	.github img {max-width: 100%}
 
   .github pre.console code {
     padding: 0 !important;

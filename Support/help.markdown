@@ -1,3 +1,7 @@
+## Resources
+[daring fireball](http://daringfireball.net/projects/markdown/syntax)
+[github](http://github.github.com/github-flavored-markdown/)
+
 ## Phrase Emphasis ##
 
 	*italic*   **bold**

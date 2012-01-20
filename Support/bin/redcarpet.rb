@@ -11,6 +11,18 @@ end
 
 require 'rubygems'
 require 'redcarpet'
-STDOUT.write(Redcarpet.new(ARGF.read, :smart, :hard_wrap, :safelink,
-  :autolink, :tables, :strikethrough, :no_intraemphasis,
-  :fenced_code).to_html)
+
+md = Redcarpet::Markdown.new(Redcarpet::Render::XHTML,
+                         :autolink => true,
+                         :space_after_headers => true,
+                         :fenced_code_blocks => true,
+                         :tables => true,
+                         :strikethrough => true,
+                         :smart => true,
+                         :hard_wrap => true,
+                         :safelink => true,
+                         :no_intraemphasis => true
+                         )
+
+STDOUT.write md.render(ARGF.read)
+

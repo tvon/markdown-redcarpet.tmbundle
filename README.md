@@ -6,11 +6,11 @@ First, put this bundle in your TextMate bundle directory:
 ``` bash
 # For Textmate 2:
 cd ~/Library/Application\ Support/Avian/Bundles/
-git clone git://github.com/phil-monroe/markdown-redcarpet.tmbundle.git
+git clone https://github.com/streeter/markdown-redcarpet.tmbundle.git
 
 # OR, for Textmate original:
 cd ~/Library/Application\ Support/TextMate/Bundles/
-git clone git://github.com/phil-monroe/markdown-redcarpet.tmbundle.git
+git clone https://github.com/streeter/markdown-redcarpet.tmbundle.git
 ```
 
 
@@ -21,7 +21,7 @@ Then, make sure you've got `redcarpet` and `pygments` installed with your gem li
 cd ~/Library/Application\ Support/TextMate/Bundles/markdown-redcarpet.tmbundle
 bundle install
 
-# or manually, this is pretty hacky.
+# Or manually. But this is pretty hacky.
 [sudo] gem install redcarpet
 [sudo] gem install pygments.rb
 ```

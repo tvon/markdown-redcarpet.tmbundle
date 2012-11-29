@@ -11,18 +11,32 @@ end
 
 require 'rubygems'
 require 'redcarpet'
+require "pygments"
 
-md = Redcarpet::Markdown.new(Redcarpet::Render::XHTML,
-                         :autolink => true,
-                         :space_after_headers => true,
-                         :fenced_code_blocks => true,
-                         :tables => true,
-                         :strikethrough => true,
-                         :smart => true,
-                         :hard_wrap => true,
-                         :safelink => true,
-                         :no_intraemphasis => true
-                         )
+css = "<style>#{Pygments.css(style: "colorful")}</style>"
 
-STDOUT.write md.render(ARGF.read)
+class HTMLwithPygments < Redcarpet::Render::HTML
+  def block_code(code, language)
+    Pygments.highlight(code, lexer: language)
+  end
+end
+
+def markdown(text)
+  renderer = HTMLwithPygments.new(hard_wrap: true, filter_html: true)
+  options = {
+    :autolink => true,
+    :space_after_headers => true,
+    :fenced_code_blocks => true,
+    :tables => true,
+    :strikethrough => true,
+    :smart => true,
+    :hard_wrap => true,
+    :safelink => true,
+    :no_intraemphasis => true
+  }
+  Redcarpet::Markdown.new(renderer, options).render(text)
+end
+
+
+STDOUT.write [css, markdown(ARGF.read)].join
 

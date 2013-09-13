@@ -1,4 +1,5 @@
 #!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
+
 # Usage: redcarpet [<file>...]
 # Convert one or more Markdown files to HTML and write to standard output. With
 # no <file> or when <file> is '-', read Markdown source text from standard input.
@@ -13,16 +14,16 @@ require 'rubygems'
 require 'redcarpet'
 require "pygments"
 
-css = "<style>#{Pygments.css(style: "colorful")}</style>"
+css = "<style>#{Pygments.css(:style => "colorful")}</style>"
 
 class HTMLwithPygments < Redcarpet::Render::HTML
   def block_code(code, language)
-    Pygments.highlight(code, lexer: language)
+    Pygments.highlight(code, :lexer => language)
   end
 end
 
 def markdown(text)
-  renderer = HTMLwithPygments.new(hard_wrap: true, filter_html: true)
+  renderer = HTMLwithPygments.new(:hard_wrap => true, :filter_html => true)
   options = {
     :autolink => true,
     :space_after_headers => true,

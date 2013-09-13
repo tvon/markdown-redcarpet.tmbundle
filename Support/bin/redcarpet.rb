@@ -11,8 +11,38 @@ if ARGV.include?('--help')
 end
 
 require 'rubygems'
-require 'redcarpet'
-require "pygments"
+
+begin
+  require 'redcarpet'
+  require 'pygments'
+rescue LoadError
+  puts <<-HTML
+  <style>
+  .error h2 {color: red;}
+  .error .hint h3 {color: #555;}
+  </style>
+
+  <div class="error">
+  <h2>Please install the following gems on your system Ruby</h2>
+
+  <h3>Step 1: Install the required gems</h3>
+  <pre><code>
+  sudo gem install redcarpet -v 2.3.0
+  sudo gem install pygments.rb
+  </code></pre>
+
+  <div class="hint">
+  <h3>WARNING: If you're using a Ruby version manager activate the system Ruby first</h3>
+  <pre><code>
+  rvm use system                          # for RVM
+  expoprt RBENV_VERSION="system"          # for rbenv
+  </code></pre>
+  </div>
+
+  </div>
+  HTML
+  exit 0
+end
 
 css = "<style>#{Pygments.css(:style => "colorful")}</style>"
 

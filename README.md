@@ -1,15 +1,11 @@
-TextMate Bundle for GitHub's Redcarpet Markdown
------------------------------------------------
+# TextMate Bundle for GitHub's Redcarpet Markdown
 
 First, put this bundle in your TextMate bundle directory:
 
 ``` bash
 # For Textmate 2:
+mkdir -p ~/Library/Application\ Support/Avian/Bundles/
 cd ~/Library/Application\ Support/Avian/Bundles/
-git clone https://github.com/streeter/markdown-redcarpet.tmbundle.git
-
-# OR, for Textmate original:
-cd ~/Library/Application\ Support/TextMate/Bundles/
 git clone https://github.com/streeter/markdown-redcarpet.tmbundle.git
 ```
 
@@ -17,25 +13,13 @@ git clone https://github.com/streeter/markdown-redcarpet.tmbundle.git
 Then, make sure you've got `redcarpet` and `pygments` installed with your gem library:
 
 ``` bash
-# Using Bundler:
-cd ~/Library/Application\ Support/TextMate/Bundles/markdown-redcarpet.tmbundle
-bundle install
+# Activate the system ruby (if you're using a Ruby version manager):
+rvm use system                          # for RVM
+expoprt RBENV_VERSION = "1.9.3-p194"    # for rbenv
 
-# Or manually. But this is pretty hacky.
-[sudo] gem install redcarpet
-[sudo] gem install pygments.rb
-```
-
-Finally, make sure Textmate uses the right version of ruby everywhere:
-
-``` bash
-# For rbenv, add this to ~/.tm_properties for Textmate 2
-TM_RUBY       = "$HOME/.rbenv/shims/ruby"
-PATH          = "$HOME/.rbenv/bin:$HOME/.rbenv/shims/:$PATH"
-RBENV_VERSION = "1.9.3-p194"
-
-# For RVM, need somebody to figure it out, but should be close to the rbenv version
-
+# Install the required gems
+sudo gem install redcarpet -v 2.3.0
+sudo gem install pygments.rb
 ```
 
 **Bonus** Install the [Github theme][github-theme] for a nice looking preview

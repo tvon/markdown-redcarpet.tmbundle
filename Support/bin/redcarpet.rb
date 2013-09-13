@@ -25,15 +25,15 @@ end
 def markdown(text)
   renderer = HTMLwithPygments.new(:hard_wrap => true, :filter_html => true)
   options = {
-    :autolink => true,
+    :autolink            => true,
     :space_after_headers => true,
-    :fenced_code_blocks => true,
-    :tables => true,
-    :strikethrough => true,
-    :smart => true,
-    :hard_wrap => true,
-    :safelink => true,
-    :no_intraemphasis => true
+    :fenced_code_blocks  => true,
+    :tables              => true,
+    :strikethrough       => true,
+    :smart               => true,
+    :hard_wrap           => true,
+    :safelink            => true,
+    :no_intraemphasis    => true,
   }
   Redcarpet::Markdown.new(renderer, options).render(text)
 end

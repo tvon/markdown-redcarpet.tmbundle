@@ -15,7 +15,7 @@ Then, make sure you've got `redcarpet` and `pygments` installed with your gem li
 ``` bash
 # Activate the system ruby (if you're using a Ruby version manager):
 rvm use system                          # for RVM
-expoprt RBENV_VERSION = "1.9.3-p194"    # for rbenv
+expoprt RBENV_VERSION="system"          # for rbenv
 
 # Install the required gems
 sudo gem install redcarpet -v 2.3.0

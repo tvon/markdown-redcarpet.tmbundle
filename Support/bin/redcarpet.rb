@@ -48,7 +48,10 @@ css = "<style>#{Pygments.css(:style => "colorful")}</style>"
 
 class HTMLwithPygments < Redcarpet::Render::HTML
   def block_code(code, language)
+    language ||= 'text'
     Pygments.highlight(code, :lexer => language)
+  rescue
+    Pygments.highlight(code, :lexer => 'text')
   end
 end
 

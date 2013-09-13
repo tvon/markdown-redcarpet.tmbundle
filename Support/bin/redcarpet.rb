@@ -39,5 +39,5 @@ def markdown(text)
 end
 
 
-STDOUT.write [css, markdown(ARGF.read)].join
+puts [css, markdown(ARGF.read)].join
 

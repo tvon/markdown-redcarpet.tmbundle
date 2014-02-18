@@ -60,6 +60,10 @@
 				</dict>
 				<dict>
 					<key>include</key>
+					<string>#fenced_block_r</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#fenced_block</string>
 				</dict>
 				<dict>
@@ -123,6 +127,22 @@
 						<dict>
 							<key>include</key>
 							<string>source.coffee</string>
+						</dict>
+					</array>
+				</dict>
+				<key>fenced_block_r</key>
+				<dict>
+					<key>begin</key>
+					<string>(^|\G)([`]{3})[ ]*(?:r|R)$</string>
+					<key>end</key>
+					<string>(^|\G)([`]{3})($|\z)</string>
+					<key>name</key>
+					<string>markup.raw.block.markdown.fenced</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>source.r</string>
 						</dict>
 					</array>
 				</dict>

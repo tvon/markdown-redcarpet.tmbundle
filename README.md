@@ -2,7 +2,7 @@
 
 First, put this bundle in your TextMate bundle directory:
 
-``` bash
+```bash
 # For Textmate 2:
 mkdir -p ~/Library/Application\ Support/Avian/Bundles/
 cd ~/Library/Application\ Support/Avian/Bundles/
@@ -12,10 +12,10 @@ git clone https://github.com/streeter/markdown-redcarpet.tmbundle.git
 
 Then, make sure you've got `redcarpet` and `pygments` installed with your gem library:
 
-``` bash
+```bash
 # Activate the system ruby (if you're using a Ruby version manager):
 rvm use system                          # for RVM
-expoprt RBENV_VERSION="system"          # for rbenv
+export RBENV_VERSION="system"           # for rbenv
 
 # Install the required gems
 sudo gem install redcarpet -v 2.3.0

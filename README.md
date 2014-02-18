@@ -22,10 +22,10 @@ sudo gem install redcarpet -v 2.3.0
 sudo gem install pygments.rb
 ```
 
-![Redcarpet Markdown Bundle in action](http://cl.ly/image/1Y071W2A2l1w/Screen%20Shot%202014-02-18%20at%2011.02.32%20am.png)
+![Redcarpet Markdown Bundle in action](https://raw.github.com/streeter/markdown-redcarpet.tmbundle/master/theme-preview.png)
 
 
-**Bonus** [Install the **Scott Web Theme** from *Preferences → Bundles*](http://cl.ly/image/2v3v1Z0u3F11) for a nice looking preview
+**Bonus** [Install the **Scott Web Theme** from *Preferences → Bundles*](https://raw.github.com/streeter/markdown-redcarpet.tmbundle/master/theme-preview-scott.png) for a nice looking preview
 
 Reload TextMate and tell it to read `.md` files as Markdown Redcarpet types.
 

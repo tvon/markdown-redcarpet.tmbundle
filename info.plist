@@ -8,18 +8,18 @@
 	<string>Elia Schito, Chris Streeter, Michael Sheets</string>
 	<key>description</key>
 	<string>&lt;a href="http://daringfireball.net/projects/markdown/"&gt;Markdown&lt;/a&gt; allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML. This bundle provides preview functionality, syntax highlighting, and several useful commands.</string>
-	<key>name</key>
-	<string>Markdown Redcarpet</string>
 	<key>mainMenu</key>
 	<dict>
 		<key>items</key>
-  	<array>
-  		<string>A2B854C4-044E-44A6-B28B-5CADA571F780</string>
-  		<string>70120ECC-B129-4479-8A9C-F25D64037039</string>
-  		<string>BE79A69A-B9F5-4BCD-9068-893496E86663</string>
-  		<string>13D9017E-932F-41F3-BB6E-F8E832F63DB3</string>
-  	</array>
+		<array>
+			<string>A2B854C4-044E-44A6-B28B-5CADA571F780</string>
+			<string>70120ECC-B129-4479-8A9C-F25D64037039</string>
+			<string>BE79A69A-B9F5-4BCD-9068-893496E86663</string>
+			<string>13D9017E-932F-41F3-BB6E-F8E832F63DB3</string>
+		</array>
 	</dict>
+	<key>name</key>
+	<string>Markdown Redcarpet</string>
 	<key>uuid</key>
 	<string>75CC094F-A72F-4782-B60D-34AA1A6C1DF6</string>
 </dict>

@@ -52,6 +52,14 @@
 				</dict>
 				<dict>
 					<key>include</key>
+					<string>#fenced_block_coffee</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#fenced_block_shell</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#fenced_block</string>
 				</dict>
 				<dict>
@@ -102,6 +110,22 @@
 					<key>name</key>
 					<string>markup.raw.block.markdown.fenced</string>
 				</dict>
+				<key>fenced_block_coffee</key>
+				<dict>
+					<key>begin</key>
+					<string>(^|\G)([`]{3})[ ]*coffee$</string>
+					<key>end</key>
+					<string>(^|\G)([`]{3})($|\z)</string>
+					<key>name</key>
+					<string>markup.raw.block.markdown.fenced</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>source.coffee</string>
+						</dict>
+					</array>
+				</dict>
 				<key>fenced_block_ruby</key>
 				<dict>
 					<key>begin</key>
@@ -115,6 +139,22 @@
 						<dict>
 							<key>include</key>
 							<string>source.ruby</string>
+						</dict>
+					</array>
+				</dict>
+				<key>fenced_block_shell</key>
+				<dict>
+					<key>begin</key>
+					<string>(^|\G)([`]{3})[ ]*(?:bash|shell|sh)$</string>
+					<key>end</key>
+					<string>(^|\G)([`]{3})($|\z)</string>
+					<key>name</key>
+					<string>markup.raw.block.markdown.fenced</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>source.shell</string>
 						</dict>
 					</array>
 				</dict>

@@ -22,7 +22,10 @@ sudo gem install redcarpet -v 2.3.0
 sudo gem install pygments.rb
 ```
 
-**Bonus** Install the [Github theme][github-theme] for a nice looking preview
+![Redcarpet Markdown Bundle in action](http://cl.ly/image/1Y071W2A2l1w/Screen%20Shot%202014-02-18%20at%2011.02.32%20am.png)
+
+
+**Bonus** [Install the **Scott Web Theme** from *Preferences → Bundles*](http://cl.ly/image/2v3v1Z0u3F11) for a nice looking preview
 
 Reload TextMate and tell it to read `.md` files as Markdown Redcarpet types.
 
@@ -31,3 +34,4 @@ For more information about GitHub's Redcarpet markdown, [checkout this post][git
 
 [github-flavored-markdown]: http://github.github.com/github-flavored-markdown/
 [github-theme]: https://github.com/kneath/github_textmate_preview
+

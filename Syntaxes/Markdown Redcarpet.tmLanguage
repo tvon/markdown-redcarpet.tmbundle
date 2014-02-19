@@ -133,7 +133,7 @@
 				<key>fenced_block_r</key>
 				<dict>
 					<key>begin</key>
-					<string>(^|\G)([`]{3})[ ]*(?:r|R)$</string>
+					<string>(^|\G)([`]{3})\{*[ ]*(?:r|R).*\}*$</string>
 					<key>end</key>
 					<string>(^|\G)([`]{3})($|\z)</string>
 					<key>name</key>

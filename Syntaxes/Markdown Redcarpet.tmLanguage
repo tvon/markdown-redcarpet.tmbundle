@@ -8,6 +8,8 @@
 		<string>mdown</string>
 		<string>markdown</string>
 		<string>markdn</string>
+		<string>Rmd</string>
+		<string>rmd</string>
 	</array>
 	<key>keyEquivalent</key>
 	<string>^~M</string>
@@ -137,7 +139,7 @@
 					<key>end</key>
 					<string>(^|\G)([`]{3})($|\z)</string>
 					<key>name</key>
-					<string>markup.raw.block.markdown.fenced</string>
+					<string>source.r.embedded.rmarkdown</string>
 					<key>patterns</key>
 					<array>
 						<dict>

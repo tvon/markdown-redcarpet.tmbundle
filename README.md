@@ -18,8 +18,8 @@ rvm use system                          # for RVM
 export RBENV_VERSION="system"           # for rbenv
 
 # Install the required gems
-sudo gem install redcarpet -v 2.3.0
-sudo gem install pygments.rb
+sudo /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/gem install redcarpet -v 2.3.0
+sudo /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/gem install pygments.rb
 ```
 
 ![Redcarpet Markdown Bundle in action](https://raw.github.com/streeter/markdown-redcarpet.tmbundle/master/theme-preview.png)

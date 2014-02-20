@@ -33,11 +33,17 @@ cd "$DIR"
 html_header 'knit html result with knitr' "$FILENAME"
 echo '&lt;h2&gt;Kniting…&lt;/h2&gt;'
 
+# Choose R from the TextMate TM_REXEC variable or default to R
+if [ "$TM_REXEC" = "" ]
+	then USE_THIS_R="R"
+	else USE_THIS_R="$TM_REXEC"
+fi
+
 # Define working dir
 SW=${TM_SWEAVE_WD:=${TM_DIRECTORY}}
 # Actually run knitr
 # More info at http://cran.r-project.org/web/packages/knitr/index.html
-echo -e "setwd('$SW');library(knitr); knit2html('$FILENAME')" | R --vanilla --quiet | pre
+echo -e "setwd('$SW');library(knitr); knit2html('$FILENAME')" | ${USE_THIS_R} --vanilla --quiet | pre
 
 # If there is output and it's newer than the current document, then we go directly to preview or link to it.
 

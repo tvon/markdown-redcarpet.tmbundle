@@ -493,6 +493,10 @@
 				</dict>
 				<dict>
 					<key>include</key>
+					<string>#code-inline-r</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#raw</string>
 				</dict>
 				<dict>
@@ -676,6 +680,35 @@
 					<string>&lt;(?![a-z/?\$!])</string>
 					<key>name</key>
 					<string>meta.other.valid-bracket.markdown</string>
+				</dict>
+				<key>code-inline-r</key>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.raw.markdown</string>
+						</dict>
+						<key>2</key>
+						<dict/>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.raw.markdown</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>(`+)[r|R][ ]+([^`]|(?!(?&lt;!`)\1(?!`))`)*+(\1)</string>
+					<key>name</key>
+					<string>source.r.embedded.rmarkdown</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>source.r</string>
+						</dict>
+					</array>
 				</dict>
 				<key>escape</key>
 				<dict>
@@ -1188,7 +1221,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>(`+)([^`]|(?!(?&lt;!`)\1(?!`))`)*+(\1)</string>
+					<string>(`+(?!([r|R][ ]+)))([^`]|(?!(?&lt;!`)\1(?!`))`)*+(\1)</string>
 					<key>name</key>
 					<string>markup.raw.inline.markdown</string>
 				</dict>

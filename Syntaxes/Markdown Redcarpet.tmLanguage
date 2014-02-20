@@ -683,23 +683,26 @@
 				</dict>
 				<key>code-inline-r</key>
 				<dict>
-					<key>captures</key>
+					<key>begin</key>
+					<string>(`[r|R][ ]+)</string>
+					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
 						<dict>
 							<key>name</key>
 							<string>punctuation.definition.raw.markdown</string>
 						</dict>
-						<key>2</key>
-						<dict/>
-						<key>3</key>
+					</dict>
+					<key>end</key>
+					<string>(`)</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>1</key>
 						<dict>
 							<key>name</key>
 							<string>punctuation.definition.raw.markdown</string>
 						</dict>
 					</dict>
-					<key>match</key>
-					<string>(`+)[r|R][ ]+([^`]|(?!(?&lt;!`)\1(?!`))`)*+(\1)</string>
 					<key>name</key>
 					<string>source.r.embedded.rmarkdown</string>
 					<key>patterns</key>

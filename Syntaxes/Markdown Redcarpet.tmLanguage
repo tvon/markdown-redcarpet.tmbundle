@@ -121,7 +121,7 @@
 				<key>fenced_block_coffee</key>
 				<dict>
 					<key>begin</key>
-					<string>(^|\G)([`]{3})[ ]*coffee$</string>
+					<string>(^|\G)([`]{3})[ ]*(?:coffee|coffeescript)$</string>
 					<key>end</key>
 					<string>(^|\G)([`]{3})($|\z)</string>
 					<key>name</key>

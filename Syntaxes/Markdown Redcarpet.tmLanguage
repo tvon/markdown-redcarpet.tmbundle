@@ -52,6 +52,10 @@
 				</dict>
 				<dict>
 					<key>include</key>
+					<string>#fenced_block_javascript</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#fenced_block_coffee</string>
 				</dict>
 				<dict>
@@ -143,6 +147,22 @@
 						<dict>
 							<key>include</key>
 							<string>text.haml</string>
+						</dict>
+					</array>
+				</dict>
+				<key>fenced_block_javascript</key>
+				<dict>
+					<key>begin</key>
+					<string>(^|\G)([`]{3})[ ]*(?:js|javascript)$</string>
+					<key>end</key>
+					<string>(^|\G)([`]{3})($|\z)</string>
+					<key>name</key>
+					<string>markup.raw.block.markdown.fenced</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>source.shell</string>
 						</dict>
 					</array>
 				</dict>

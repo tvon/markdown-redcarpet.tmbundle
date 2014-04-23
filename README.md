@@ -9,7 +9,9 @@ cd ~/Library/Application\ Support/Avian/Bundles/
 git clone https://github.com/streeter/markdown-redcarpet.tmbundle.git
 
 # Then, make sure you've got `redcarpet` and `pygments` installed with your gem library with system's Ruby 1.8:
-sudo /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -S gem install redcarpet -v 2.3.0
+type rvm &> /dev/null && rvm system    # for RVM
+export RBENV_VERSION="system"          # for rbenv
+sudo /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -S gem install redcarpet -v 2.3.0 && \
 sudo /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -S gem install pygments.rb
 ```
 

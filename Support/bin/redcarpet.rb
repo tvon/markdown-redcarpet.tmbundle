@@ -25,19 +25,19 @@ rescue LoadError
   <div class="error">
   <h2>Please install the following gems on your system Ruby</h2>
 
-  <h3>Step 1: Install the required gems</h3>
-  <pre><code>
-  sudo gem install redcarpet -v 2.3.0
-  sudo gem install pygments.rb
-  </code></pre>
-
   <div class="hint">
   <h3>WARNING: If you're using a Ruby version manager activate the system Ruby first</h3>
   <pre><code>
-  rvm use system                          # for RVM
-  expoprt RBENV_VERSION="system"          # for rbenv
   </code></pre>
   </div>
+
+  <h3>Install the required gems</h3>
+  <pre><code>
+  type rvm &amp;&gt; /dev/null &amp;&amp; rvm system    # for RVM
+  export RBENV_VERSION="system"          # for rbenv
+  sudo /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -S gem install redcarpet -v 2.3.0 &amp;&amp; \
+  sudo /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -S gem install pygments.rb
+  </code></pre>
 
   </div>
   HTML

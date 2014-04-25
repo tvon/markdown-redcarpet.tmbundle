@@ -8,6 +8,8 @@
 		<string>mdown</string>
 		<string>markdown</string>
 		<string>markdn</string>
+		<string>Rmd</string>
+		<string>rmd</string>
 	</array>
 	<key>keyEquivalent</key>
 	<string>^~M</string>
@@ -57,6 +59,10 @@
 				<dict>
 					<key>include</key>
 					<string>#fenced_block_shell</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#fenced_block_r</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -123,6 +129,22 @@
 						<dict>
 							<key>include</key>
 							<string>source.coffee</string>
+						</dict>
+					</array>
+				</dict>
+				<key>fenced_block_r</key>
+				<dict>
+					<key>begin</key>
+					<string>(^|\G)([`]{3})\{*[ ]*(?:r|R).*\}*$</string>
+					<key>end</key>
+					<string>(^|\G)([`]{3})($|\z)</string>
+					<key>name</key>
+					<string>source.r.embedded.rmarkdown</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>source.r</string>
 						</dict>
 					</array>
 				</dict>
@@ -471,6 +493,10 @@
 				</dict>
 				<dict>
 					<key>include</key>
+					<string>#code-inline-r</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#raw</string>
 				</dict>
 				<dict>
@@ -654,6 +680,38 @@
 					<string>&lt;(?![a-z/?\$!])</string>
 					<key>name</key>
 					<string>meta.other.valid-bracket.markdown</string>
+				</dict>
+				<key>code-inline-r</key>
+				<dict>
+					<key>begin</key>
+					<string>(`[r|R][ ]+)</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.raw.markdown</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>(`)</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.raw.markdown</string>
+						</dict>
+					</dict>
+					<key>name</key>
+					<string>source.r.embedded.rmarkdown</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>source.r</string>
+						</dict>
+					</array>
 				</dict>
 				<key>escape</key>
 				<dict>
@@ -1166,7 +1224,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>(`+)([^`]|(?!(?&lt;!`)\1(?!`))`)*+(\1)</string>
+					<string>(`+(?!([r|R][ ]+)))([^`]|(?!(?&lt;!`)\1(?!`))`)*+(\1)</string>
 					<key>name</key>
 					<string>markup.raw.inline.markdown</string>
 				</dict>

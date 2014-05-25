@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\`\`\`${1|,css,js,ruby,shell,haml,html|}
+	<string>\`\`\`${1|,css,js,{r},ruby,shell,haml,html|}
 ${2:${TM_SELECTED_TEXT}}
 \`\`\`
 </string>

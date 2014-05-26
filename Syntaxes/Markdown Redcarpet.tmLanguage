@@ -124,22 +124,22 @@
 					<key>name</key>
 					<string>markup.raw.block.markdown.fenced</string>
 				</dict>
-				<key>fenced_block_coffee</key>
-				<dict>
-					<key>begin</key>
-					<string>(^|\G)([`]{3})[ ]*(?:coffee|coffeescript)$</string>
-					<key>end</key>
-					<string>(^|\G)([`]{3})($|\z)</string>
-					<key>name</key>
-					<string>markup.raw.block.markdown.fenced</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>source.coffee</string>
-						</dict>
-					</array>
-				</dict>
+        <key>fenced_block_coffee</key>
+        <dict>
+          <key>begin</key>
+          <string>(^|\G)([`]{3})[ ]*(?:coffee|coffeescript)$</string>
+          <key>end</key>
+          <string>(^|\G)([`]{3})($|\z)</string>
+          <key>name</key>
+          <string>markup.raw.block.markdown.fenced</string>
+          <key>patterns</key>
+          <array>
+            <dict>
+              <key>include</key>
+              <string>source.coffee</string>
+            </dict>
+          </array>
+        </dict>
 				<key>fenced_block_haml</key>
 				<dict>
 					<key>begin</key>
@@ -148,6 +148,7 @@
 					<string>(^|\G)([`]{3})($|\z)</string>
 					<key>name</key>
 					<string>markup.raw.block.markdown.fenced</string>
+          <key>patterns</key>
           <array>
             <dict>
               <key>include</key>

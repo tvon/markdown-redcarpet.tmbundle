@@ -29,8 +29,6 @@ The following syntaxes will be highlighted inside the fenced block:
 - Haml
 - R
 
-![Redcarpet Markdown Bundle in action](https://raw.github.com/streeter/markdown-redcarpet.tmbundle/master/theme-preview.png)
-
 
 **Bonus** [Install the **Scott Web Theme** from *Preferences → Bundles*](https://raw.github.com/streeter/markdown-redcarpet.tmbundle/master/theme-preview-scott.png) for a nice looking preview
 

@@ -231,7 +231,7 @@
 				<key>fenced_block_ruby</key>
 				<dict>
 					<key>begin</key>
-					<string>(^|\G)([`]{3})[ ]*ruby$</string>
+					<string>(^|\G)([`]{3})[ ]*(?:rb|ruby)$</string>
 					<key>end</key>
 					<string>(^|\G)([`]{3})($|\z)</string>
 					<key>name</key>

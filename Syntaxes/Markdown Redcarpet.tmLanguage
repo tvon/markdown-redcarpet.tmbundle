@@ -30,6 +30,10 @@
 			<array>
 				<dict>
 					<key>include</key>
+					<string>#yaml_frontmatter</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#separator</string>
 				</dict>
 				<dict>
@@ -548,6 +552,15 @@
 					<string>(^|\G)[ ]{,3}([-*_])([ ]{,2}\2){2,}[ \t]*$\n?</string>
 					<key>name</key>
 					<string>meta.separator.markdown</string>
+				</dict>
+				<key>yaml_frontmatter</key>
+				<dict>
+					<key>begin</key>
+					<string>(^|\G)[ ]{,3}([-*_])([ ]{,2}\2){2,}[ \t]*$\n?</string>
+					<key>end</key>
+					<string>(^|\G)[ ]{,3}([-*_])([ ]{,2}\2){2,}[ \t]*$\n?</string>
+					<key>name</key>
+					<string>meta.frontmatter.markdown</string>
 				</dict>
 			</dict>
 		</dict>
